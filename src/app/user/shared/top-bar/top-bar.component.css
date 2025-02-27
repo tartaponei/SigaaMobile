@@ -1,0 +1,14 @@
+.top-bar {
+    padding: 16px;
+    background-color: var(--bar-background);
+    display: flex;
+    align-items: center;
+    width: 360px;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+
+.profile-pic.small {
+    width: 48px;
+    border-radius: var(--corner-full);
+}

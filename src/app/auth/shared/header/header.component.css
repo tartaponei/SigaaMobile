@@ -1,0 +1,25 @@
+.logo {
+    fill: var(--primary);
+}
+
+.toggle-switch-slider.dark-mode-switch::after {
+    content: url('/icons/dark_mode.svg');
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: auto;
+    left: 6px;
+    top: 55%;
+    transform: translateY(-50%);
+    transition: transform 1.5s;
+}
+
+.toggle-switch-input:checked + .toggle-switch-slider.dark-mode-switch::after {
+    content: url('/icons/light_mode.svg');
+    display: inline-block;
+    right: 0;
+    left: auto;
+    transform: translateY(-50%);
+    transition: transform 1.5s;
+}
