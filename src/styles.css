@@ -5,6 +5,8 @@
     /* ---------------SIZES AND SPACEMENT------------------ */
     /* ==================================================== */
 
+    --screen-size: 360px;
+
     --icon-smaller: 16px;
     --icon-small: 20px;
     --icon-medium: 24px;
@@ -17,6 +19,9 @@
     --corner-large: 16px;
     --corner-larger: 28px;
     --corner-full: 1000px;
+
+    --space-tiny: 4px;
+    --space-small: 16px;
 
 
     /* =============================================== */
@@ -84,7 +89,7 @@
 
 body {
     /* padding: 0 16px; */
-    margin: 0;
+    margin: 0 16px;
     width: 360px;
 }
 
@@ -118,7 +123,9 @@ input {
     color: var(--form-input-placeholder);
 }
 
-/* TOGGLE SWITCH */
+/* ------------------------------- */
+/* ----------- Toggle switch ----------- */
+/* ------------------------------- */
 .toggle-switch {
     position: relative;
     display: inline-block;
@@ -173,3 +180,55 @@ input {
     background-color: var(--standard-0);
 }
 
+/* ------------------------------- */
+/* ----------- Tooltip ----------- */
+/* ------------------------------- */
+
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+  }
+  
+/* Tooltip text */
+.tooltip .tooltiptext {
+visibility: hidden;
+width: 120px;
+background-color: black;
+color: #fff;
+text-align: center;
+padding: 5px 0;
+border-radius: 6px;
+
+/* Position the tooltip text - see examples below! */
+position: absolute;
+z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+visibility: visible;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-small);
+}
+
+.form-input {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-tiny);
+    align-items: flex-end;
+}
+
+.form-input label {
+    width: var(--screen-size);
+}
+
+.form-input input {
+    width: var(--screen-size);
+    box-sizing: border-box;
+}
