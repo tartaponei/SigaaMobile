@@ -1,0 +1,84 @@
+<div class="styleguide-container">
+    <h1 class="heading-1 title">Styleguide</h1>
+
+    <div class="style-container typography">
+        <p class="label-3">Tipografia</p>
+        
+        <div class="style-list">
+            <div class="type-container">
+                <h1 class="heading-1">Heading 1</h1>
+                <h2 class="heading-2">Heading 2</h2>
+                <h3 class="heading-3">Heading 3</h3>
+            </div>
+
+            <div class="type-container">
+                <p class="title-1">Title 1</p>
+                <p class="title-2">Title 2</p>
+                <p class="title-3">Title 3</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="style-container forms">
+        <p class="label-3">Formulários</p>
+        <p class="label-3">Icon inputs</p>
+        <div class="form-container login-form">
+            <form action="">
+                <div class="form-input login-form user-field">
+                    <div class="label-container">
+                        <label for="user">Usuário</label>
+                    </div>
+                    <div class="icon-input user-input">
+                        <input type="text" name="user" id="user" placeholder="Seu usuário">
+                    </div>
+                    <a href="" class="link-3 forgotten-user">Esqueceu seu usuário?</a>
+                </div>
+                
+                <div class="form-input login-form password-field">
+                    <div class="label-container">
+                        <label for="password">Senha</label>
+
+                        <div class="tooltip">
+                            <span [inlineSVG]="'icons/help.svg'" class="tooltip-icon"></span>
+                            <span class="tooltiptext body-3"> A senha diferecia letras maiúsculas de minúsculas. </span>
+                        </div>
+                    </div>
+                    
+                    <div class="icon-input password-input">
+                        <input type="password" name="password" id="password" placeholder="Sua senha">
+                    </div>
+                    <a href="" class="link-3 forgotten-password">Esqueceu sua senha?</a>
+                </div>            
+            </form>
+        </div>
+
+        <p class="label-3">Inputs</p>
+        <div class="form-container">
+            <form action="">
+                <div class="form-input">
+                    <div class="label-container">
+                        <label for="field">Campo</label>
+                    </div>
+                    <input required type="text" name="field" id="field" placeholder="Campo">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="style-container buttons">
+        <p class="label-3">Botões</p>
+
+        <div class="style-list">
+            <a href="#" class=" button button-primary button-standard">Botão primário</a>
+
+            <a href="#" class="button button-secondary button-standard">Botão secundário</a>
+
+            <div class="button-tertiary-container">
+                <a href="" class="button button-tertiary button-standard">Botão terciário</a>
+                <span class="icon" [inlineSVG]="'/icons/forward.svg'"></span>
+            </div>
+        </div>
+    </div>
+    
+</div>
+

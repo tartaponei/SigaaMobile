@@ -1,19 +1,43 @@
 <main>
     <div class="form-container login-form">
         <form action="">
-            <div class="form-input login-form user-input">
-                <label for="user">Usuário</label>
-                <input type="text" name="user" id="user" placeholder="Seu usuário">
-                <a href="" class="forgotten-user">Esqueceu seu usuário?</a>
+            <div class="form-input login-form user-field">
+                <div class="label-container">
+                    <label for="user">Usuário</label>
+                </div>
+                <div class="icon-input user-input">
+                    <input type="text" name="user" id="user" placeholder="Seu usuário">
+                </div>
+                <a href="" class="link-3 forgotten-user">Esqueceu seu usuário?</a>
             </div>
-            <div class="form-input login-form password-input">
-                <label for="password">Senha</label>
-                <input type="text" name="password" id="password" placeholder="Sua senha">
-                <a href="" class="forgotten-password">Esqueceu sua senha?</a>
-                <span class="tooltiptext">help</span>
-            </div>
+            
+            <div class="form-input login-form password-field">
+                <div class="label-container">
+                    <label for="password">Senha</label>
+
+                    <div class="tooltip">
+                        <span [inlineSVG]="'icons/help.svg'" class="tooltip-icon"></span>
+                        <span class="tooltiptext body-3"> A senha diferecia letras maiúsculas de minúsculas. </span>
+                    </div>
+                </div>
+                
+                <div class="icon-input password-input">
+                    <input type="password" name="password" id="password" placeholder="Sua senha">
+                </div>
+                <a href="" class="link-3 forgotten-password">Esqueceu sua senha?</a>
+            </div>            
         </form>
+
+        <div class="login-buttons">
+            <a href="#" class=" button button-primary button-standard">entrar</a>
+    
+            <span class="separator"></span>
+
+            <a href="#" class="button button-secondary button-standard">Botão secundário</a>
+        </div>
+
+        <div class="lost-access-container">
+            <a class="link-3" href="#">Perdeu acesso ao e-mail vinculado?</a>
+        </div>
     </div>
 </main>
-
-

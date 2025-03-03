@@ -1,0 +1,16 @@
+div.style-container {
+    margin-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+}
+
+div.style-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+}
+
+.title {
+    margin-bottom: 32px;
+}

@@ -1,0 +1,17 @@
+form {
+    margin-bottom: 48px;
+}
+
+.login-buttons {
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--space-medium);
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.lost-access-container {
+    margin: 0 auto;
+    text-align: center;
+}
