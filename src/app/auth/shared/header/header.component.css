@@ -1,6 +1,7 @@
 .logo {
     fill: var(--primary);
     align-self: center;
+    cursor: pointer;
 }
 
 header {
@@ -9,4 +10,5 @@ header {
     align-items:end;
     width: var(--usable-size);
     margin-bottom: 32px;
+    margin-inline: auto;
 }

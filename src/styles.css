@@ -132,6 +132,10 @@ body {
     margin: 0;
 }
 
+.link-1, .link-2, .link-3 {
+    cursor: pointer;
+}
+
 .heading-1 {
     font-size: 2rem;
     font-weight: 700;
@@ -299,13 +303,14 @@ button {
 /* ---------------FORMS------------------ */
 /* ====================================== */
 
-input {
+input, select {
     font-family: 'Open Sans', serif;
 
     /* body 3 */
     font-size: .875rem;
     font-weight: 400;
     line-height: 1.25rem;
+    width: 100%;
 }
 
 ::placeholder {
@@ -314,7 +319,7 @@ input {
 
 .label-container {
     display: flex;
-    width: var(--usable-size);
+    width: 100%;
     column-gap: 4px;
     align-items: center;
 }
@@ -331,19 +336,19 @@ form {
     flex-direction: column;
     gap: var(--space-tiny);
     align-items: flex-end;
+    width: 100%;
 }
 
-.form-input input {
-    width: var(--screen-size);
+.form-input input, .form-input select {
     box-sizing: border-box;
     border-radius: var(--corner-small);
     border: 1px solid var(--form-input-stroke);
-    width: var(--usable-size);
+    width: 100%;
     height: 40px;
     padding: 10px 12px;
 }
 
-.form-input input:focus {
+.form-input input:focus,.form-input select:focus {
     outline: none;
     border: 2px solid var(--form-input-focus);
     box-shadow: var(--elevation-light-1);
@@ -502,4 +507,9 @@ span.separator {
     height: 1px;
     width: 248px;
     border-radius: var(--corner-full);
+}
+
+main {
+    margin: 0 auto;
+    width: var(--usable-size);
 }

@@ -1,0 +1,73 @@
+input, select {
+    font-family: 'Open Sans', serif;
+
+    /* body 3 */
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 1.25rem;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding-right: 30px; /* Ajuste conforme necessário */
+    background: url('/icons/dropdown_arrow.svg') no-repeat right 12px center;
+    background-size: var(--icon-medium); /* Ajuste conforme necessário */
+}
+
+select:focus {
+    background: url('/icons/dropdown_arrow_opened.svg') no-repeat right 10px center;
+}
+
+::placeholder {
+    color: var(--form-input-placeholder);
+}
+
+.label-container {
+    display: flex;
+    width: 100%;
+    column-gap: 4px;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-small);
+    width: 100%;
+}
+
+.form-input {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-tiny);
+    align-items: flex-end;
+}
+
+.form-input input, .form-input select {
+    width: var(--screen-size);
+    box-sizing: border-box;
+    border-radius: var(--corner-small);
+    border: 1px solid var(--form-input-stroke);
+    width: 100%;
+    height: 40px;
+    padding: 10px 12px;
+}
+
+.form-input input:focus,.form-input select:focus {
+    outline: none;
+    border: 2px solid var(--form-input-focus);
+    box-shadow: var(--elevation-light-1);
+}
+
+.form-input.error input,
+.form-input.error select {
+    border-color: red;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.75rem;
+    margin-top: 4px;
+}

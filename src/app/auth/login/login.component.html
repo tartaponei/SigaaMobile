@@ -1,39 +1,44 @@
 <main>
     <div class="form-container login-form">
         <form action="">
-            <div class="form-input login-form user-field">
-                <div class="label-container">
-                    <label for="user">Usuário</label>
-                </div>
-                <div class="icon-input user-input">
-                    <input type="text" name="user" id="user" placeholder="Seu usuário">
-                </div>
-                <a href="" class="link-3 forgotten-user">Esqueceu seu usuário?</a>
-            </div>
-            
-            <div class="form-input login-form password-field">
-                <div class="label-container">
-                    <label for="password">Senha</label>
-
-                    <div class="tooltip">
-                        <span [inlineSVG]="'icons/help.svg'" class="tooltip-icon"></span>
-                        <span class="tooltiptext body-3"> A senha diferecia letras maiúsculas de minúsculas. </span>
+            <div class="form-fields">
+                <div class="form-input login-form user-field">
+                    <div class="label-container">
+                        <label for="user">Usuário</label>
                     </div>
+                    <div class="icon-input user-input">
+                        <input type="text" name="user" id="user" placeholder="Seu usuário">
+                    </div>
+                    <a href="" class="link-3 forgotten-user">Esqueceu seu usuário?</a>
                 </div>
                 
-                <div class="icon-input password-input">
-                    <input type="password" name="password" id="password" placeholder="Sua senha">
-                </div>
-                <a href="" class="link-3 forgotten-password">Esqueceu sua senha?</a>
-            </div>            
+                <div class="form-input login-form password-field">
+                    <div class="label-container">
+                        <label for="password">Senha</label>
+
+                        <div class="tooltip">
+                            <span [inlineSVG]="'icons/help.svg'" class="tooltip-icon"></span>
+                            <span class="tooltiptext body-3"> A senha diferecia letras maiúsculas de minúsculas. </span>
+                        </div>
+                    </div>
+                    
+                    <div class="icon-input password-input">
+                        <input type="password" name="password" id="password" placeholder="Sua senha">
+                    </div>
+                    <a href="" class="link-3 forgotten-password">Esqueceu sua senha?</a>
+                </div> 
+            </div>
+              
+            <app-primary-button
+            target="/home"
+            text="Entrar">
+            </app-primary-button>
         </form>
 
-        <div class="login-buttons">
-            <a href="#" class=" button button-primary button-standard">entrar</a>
-    
+        <div class="login-buttons">    
             <span class="separator"></span>
 
-            <a href="#" class="button button-secondary button-standard">Botão secundário</a>
+            <a routerLink="/register" class="button button-secondary button-standard">Cadastre-se</a>
         </div>
 
         <div class="lost-access-container">

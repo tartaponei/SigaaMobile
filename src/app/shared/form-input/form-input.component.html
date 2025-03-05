@@ -1,0 +1,34 @@
+@if (type==='select') {
+    <div class="form-input" [class.error]="hasError">
+        <div class="label-container">
+            <label [for]="id">{{label}}</label>
+        </div>
+        <select [name]="id" [id]="id" [required]="required">
+            @for (option of options; track option) {
+                <option [value]="option">{{option | uppercase }}</option>
+            }
+        </select> 
+    </div>
+}
+@else {
+    <div class="form-input" [class.error]="hasError">
+        <div class="label-container">
+            <label [for]="id">{{label}}</label>
+        </div>
+        @if (type=='number') {
+            <input [type]="type" [name]="id" [id]="id" [placeholder]="placeholder" [required]="required" [max]="max" [min]="min">
+        }
+        @else {
+            <input [type]="type" [name]="id" [id]="id" [placeholder]="placeholder" [required]="required">
+        }
+        
+        <!-- @if (hasError) {
+            <div class="error-message">
+                @for (errorMessage of errorMessages; track errorMessage) {
+                    <div>{{errorMessage}}</div>
+                }
+            </div>
+        } -->
+    </div>
+}
+

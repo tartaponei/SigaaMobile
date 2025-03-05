@@ -1,0 +1,87 @@
+<main>
+    <div class="title-container">
+        <h2 class="heading-2">Faça seu cadastro.</h2>
+        <p class="body-3">Já é cadastrado? <a routerLink="/login" class="link-3">Entre na sua conta.</a></p>
+    </div>
+
+    <form>
+        <app-form-input
+            type="text"
+            id="matricula"
+            placeholder="Ex.: 20251234567"
+            label="Matrícula"
+            [required]="true">
+        </app-form-input>
+
+        <app-form-input
+            type="select"
+            id="nivel"
+            placeholder="Nível"
+            label="Nível"
+            [required]="true"
+            [options]="['Graduação', 'Lato sensu', 'mestrado', 'doutorado', 'médio','técnico', 'técnico integrado', 'residência médica/multiprofissional']">
+        </app-form-input>
+
+        <app-form-input
+            type="text"
+            id="cpf"
+            placeholder="Somente números"
+            label="CPF"
+            [required]="true">
+        </app-form-input>
+
+        <app-form-input
+            type="text"
+            id="rg"
+            placeholder="Somente números"
+            label="RG"
+            [required]="true">
+        </app-form-input>
+
+        <app-form-input
+            type="date"
+            id="birthdate"
+            placeholder="DD/MM/AAAA"
+            label="Data de nascimento"
+            [required]="true">
+        </app-form-input>
+
+        <app-form-input
+            type="text"
+            id="social_name"
+            placeholder="Seu nome social"
+            label="Nome social"
+            [required]="true">
+        </app-form-input>
+
+        <app-form-input
+            type="email"
+            id="email"
+            placeholder="Ex.: exemplo@email.com"
+            label="E-mail"
+            [required]="true">
+        </app-form-input>
+
+        <div class="semester-container">
+            <app-form-input
+                type="number"
+                id="begin_year"
+                placeholder="Ex.: 2025"
+                label="Ano de início"
+                [required]="true">
+            </app-form-input>
+            <app-form-input
+                type="number"
+                id="begin_semester"
+                placeholder="1 ou 2"
+                label="Semestre de início"
+                [required]="true"
+                [max]='2' 
+                [min]='1'>
+            </app-form-input>
+        </div>
+        <app-primary-button
+        target="/register-final"
+        text="Continuar"></app-primary-button>
+    </form>
+</main>
